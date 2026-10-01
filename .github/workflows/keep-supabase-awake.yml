@@ -1,0 +1,28 @@
+# Free Supabase projects pause after a week without activity.
+# This makes one tiny read every 3 days so the demo stays up.
+# Needs repository secrets SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY
+# (Settings → Secrets and variables → Actions).
+name: Keep Supabase awake
+
+on:
+  schedule:
+    - cron: "0 6 */3 * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_PUBLISHABLE_KEY" ]; then
+            echo "Secrets not set; skipping."
+            exit 0
+          fi
+          curl --fail --silent --show-error \
+            -H "apikey: $SUPABASE_PUBLISHABLE_KEY" \
+            "$SUPABASE_URL/rest/v1/profiles?select=id&limit=1" > /dev/null
+          echo "Supabase is awake."
