@@ -1,3 +1,5 @@
+![Sawa — real-time chat with voice & video calls](docs/banner.png)
+
 # Sawa (سوا) — Real-time Chat App
 
 A WhatsApp-style messenger built with **Flutter** and **Supabase**: chat, groups, photos, voice notes, push notifications and peer-to-peer voice/video calls. Fully bilingual (Arabic RTL / English) with light and dark themes, and built entirely on free tiers.
