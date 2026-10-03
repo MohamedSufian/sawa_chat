@@ -130,7 +130,9 @@ class MessageBubble extends StatelessWidget {
       ),
     );
 
-    return Padding(
+    // Full row width, so the bubble sits on its sender's side instead of being centered by the list item.
+    return Container(
+      width: double.infinity,
       padding: EdgeInsets.only(bottom: tail ? 8 : 2),
       child: Column(
         crossAxisAlignment: mine ? CrossAxisAlignment.end : CrossAxisAlignment.start,
