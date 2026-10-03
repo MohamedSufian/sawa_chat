@@ -6,7 +6,22 @@ A WhatsApp-style messenger built with **Flutter** and **Supabase**: chat, groups
 
 ![CI](../../actions/workflows/ci.yml/badge.svg)
 
-<!-- Add screenshots / a demo GIF here, e.g. docs/screenshots/chat.png -->
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/login.jpg" width="200" alt="Phone sign-in"><br><sub>Phone sign-in</sub></td>
+    <td align="center"><img src="docs/screenshots/OTP.jpg" width="200" alt="OTP verification"><br><sub>OTP verification</sub></td>
+    <td align="center"><img src="docs/screenshots/home.jpg" width="200" alt="Chat list"><br><sub>Chat list</sub></td>
+    <td align="center"><img src="docs/screenshots/chat.jpg" width="200" alt="Conversation in Arabic, dark mode"><br><sub>Conversation (Arabic, dark)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/search.jpg" width="200" alt="User search"><br><sub>User search</sub></td>
+    <td align="center"><img src="docs/screenshots/calls.jpg" width="200" alt="Call log"><br><sub>Call log</sub></td>
+    <td align="center"><img src="docs/screenshots/settings_light.jpg" width="200" alt="Settings in English, light mode"><br><sub>Settings (English, light)</sub></td>
+    <td align="center"><img src="docs/screenshots/settings_dark.jpg" width="200" alt="Settings in Arabic, dark mode"><br><sub>Settings (Arabic, dark)</sub></td>
+  </tr>
+</table>
 
 ## Features
 
